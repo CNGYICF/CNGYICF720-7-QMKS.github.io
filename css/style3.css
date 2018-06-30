@@ -1,0 +1,222 @@
+/* ================================= 
+全局设置
+==================================== */
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+/* ================================= 
+移动优先CSS规则
+==================================== */
+.Logo {
+    margin: 0;
+    
+}
+/* 选择标签不用加点*/
+header {
+    text-align: center;/*文本对齐：居中*/
+    background-color:black;
+    position: fixed;
+    width:100%;
+   /* background-color: cornflowerblue;*/
+}
+
+/*inline 线级元素
+  block  块级元素
+*/
+
+a {
+    display:block;
+    color: beige;
+   
+}
+
+.Logo a{
+    padding-top: 0.5em 0;
+    padding-bottom: 1em;
+    
+}
+.navList li a{
+    padding: 1em 0;
+}
+
+.navList li a:hover{    /* 伪class,pseudo class:当鼠标移动到元素上时*/
+    background-color: black;
+    transition: 0.2S;
+}
+
+footer{
+    text-align: center;
+    padding:1em 0;
+    background-color: aqua;
+    color:white;
+
+}
+
+.wrap{
+    min-height: calc(100vh - 54px)/*calc函数--计算页脚*/
+}
+
+.banner{
+  /*  background-color: blueviolet;*/
+    background:  url("../images/MS.gif");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 1em 0;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 50px 50px 50px;/*上 下 阴影*/
+}
+
+
+
+
+h1,h2 {
+    margin: 0;
+    color:chartreuse;
+    
+}
+H3 {
+    color:chartreuse;
+}
+
+h2 {
+    padding-top: 1em;
+}
+
+.container{
+    width: 80%;
+    margin:auto;
+    border: 1px solid blick;
+}
+
+.col{
+    padding:1em;
+    background-color: palegreen;
+    border:1px solid black;
+ /*   width: 90%;*/
+    margin: auto;
+   /* font-family: "幼圆";*/
+    
+    
+}
+
+.col h1 {
+    text-align:center;
+    
+}
+
+.col p {
+    line-height:1.4;
+    text-align: center;
+    
+}
+HTML
+.CSS {
+    background-color:blueviolet;
+}
+
+.JavaScript{
+    background-color: #0804c0;
+    color: white;
+}
+
+div.wrap{
+    background:  url("../images/XingKong0002.jpg");
+}
+/*
+.div {
+    background-color: darkmagenta;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*                     PC端              */
+
+/*
+媒体查询：700PX查询
+*/
+@media (min-width:700px){
+    
+    footer a {
+        color: slateblue;
+    }
+    
+    header{
+        display :flex;
+       /* flex-direction:flex;*/
+        justify-content: space-around;/*漂浮*/
+        align-items: center;/*字体居中*/
+    }
+    
+    .navList{
+        display: flex;
+    }
+    
+    .navList li a{
+        padding: 1em 2em;
+        border-radius: 20px;
+    }
+    
+    .Logo a{
+        padding-bottom: 0;
+        
+    }
+
+    .banner{
+        height:600px;
+    }
+    
+    .container{
+        width: 90%;
+        display:flex;
+        padding: 3em 0;
+        
+       /* flex-wrap: wrap;  缩出去了*/
+    }
+    
+    .col p{
+        text-align: left;
+    }
+    .col{
+        flex-basis: 30%;
+        flex-grow: 1;
+        margin:0 1em;
+        border-radius: 10px;
+    }
+    
+    .col:hover{
+        box-shadow: 1px 1px 1px rgba(0,0,0,5);
+        transition: .3s;/*阴影*/
+        cursor: default;/*默认显示方式为鼠标*/
+    }
+    .CSS{
+        flex-grow: 2;
+    }
+}
+
+
+/*css-tricks  网站
+*/
+
+
+/* <a href="index.html">返回</a>*/
+
+

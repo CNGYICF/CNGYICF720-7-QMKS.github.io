@@ -1,0 +1,106 @@
+//exercise 1 - paragraph mixin
+@mixin p-font ($size,$color)
+{
+    font-size:$size;
+    color:$color;
+    
+    
+}
+
+//exercise 2 - title mixin
+@mixin title-text($color: purple, $size:3rem, $align:center, $position:relative, $top:50%)
+{
+    color:$color;
+    font-size:$size;
+    text-align:$align;
+    position:$position;
+    top:$top;
+}
+
+
+//exercise 3 - background mixin
+@mixin background-size($cover)
+{
+    background-size:$cover;
+}
+@mixin parallax-background($file)
+{
+    background: url($file) no-repeat center center fixed;
+    @include background-size (cover);
+    
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+#bg_1 {
+    width: 100%;
+    height: 80vh;
+    background-position: bottom;
+   //exercise 3 - include parallax-background here
+    @include parallax-background ("images/bg_1.jpeg");
+    h1{
+         margin:0;
+        @include title-text();
+        //exercise 2 - include title-text here
+    }
+   
+}
+
+#bg_2 {
+    width: 100%;
+    height: 80vh;
+    //exercise 3 - include parallax-background here
+    @include parallax-background ("images/bg_2.jpg");
+    h1 {
+        //exercise 2 - include title-text here
+        @include title-text();
+    }
+}
+
+#bg_3 {
+    width: 100%;
+    height: 80vh;
+    //exercise 3 - include parallax-background here
+    @include parallax-background ("images/bg_3.jpeg");
+    h1 {
+        //exercise 2 - include title-text here
+        @include title-text();
+    }
+}
+
+#bg_4 {
+    width: 100%;
+    height: 80vh;
+    //exercise 3 - include parallax-background here
+    @include parallax-background ("images/bg_4.jpeg");
+    h1 {
+       //exercise 2 - include title-text here
+        @include title-text();
+    }
+}
+
+.description {
+    width: 50%;
+    margin: auto;
+    p {
+        padding: 1rem 0 3rem 0;
+        text-align: justify;
+        //exercise 1 - include p-font here
+        @include p-font (1.5rem, yellow);
+        //exercise 1 - include p-font here
+         @include p-font (1.5rem,blue);
+        
+        //exercise 1 - include p-font here
+         @include p-font (1.5rem, yellow);
+    }
+}
+
+
+
